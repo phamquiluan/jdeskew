@@ -4,3 +4,15 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Coverage)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=phamquiluan/jdeskew&amp;utm_campaign=Badge_Grade)
 
+## Installation 
+
+```bash
+pip install -e .[dev]
+```
+
+## How-to-use
+
+```python
+from jdeskew import get_angle
+angle = get_angle(image)
+```
