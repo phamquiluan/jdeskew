@@ -28,6 +28,10 @@ jobs:
           command: |
             coverage run -m pytest tests/test.py
             coverage report -i
+            coverage xml -i
+      - run:
+          name: "Upload coverage"
+          command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
 
 
 # Invoke jobs via workflows
