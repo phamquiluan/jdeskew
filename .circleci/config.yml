@@ -26,9 +26,8 @@ jobs:
       - run:
           name: "Run test"
           command: |
-            pytest tests/test.py
-            # coverage run -m pytest tests
-            # coverage report -i
+            coverage run -m pytest tests/test.py
+            coverage report -i
 
 
 # Invoke jobs via workflows
