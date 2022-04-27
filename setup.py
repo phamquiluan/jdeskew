@@ -8,5 +8,5 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=["numpy", "opencv-python"],
-    extra_requires={"dev": ["black", "pytest"]},
+    extra_requires={"dev": ["black", "pytest", "coverage"]},
 )
