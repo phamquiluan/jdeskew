@@ -25,3 +25,15 @@ angle = get_angle(image)
 from jdeskew.utility import rotate
 output_image = rotate(image, angle)
 ```
+
+## Citation
+
+L. Pham, T. A. Tran, "Document Image Skew Estimation using Adaptive Radial Projection", 2022.
+
+```
+@misc{luandise2022,
+  title={Document Image Skew Estimation using Adaptive Radial Projection},
+  author={Luan, Pham and Tuan Anh, Tran},
+  year={2022}
+}
+```
