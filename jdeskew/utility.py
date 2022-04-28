@@ -2,8 +2,7 @@ import cv2
 
 
 def rotate(image, angle, resize=True, border_mode=None, border_value=None):
-    """
-    rotate input image respect to a given angle
+    """Rotate input image respect to a given angle.
 
     Params:
     --------
