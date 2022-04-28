@@ -34,6 +34,7 @@ L. Pham, T. A. Tran, "Document Image Skew Estimation using Adaptive Radial Proje
 @misc{luandise2022,
   title={Document Image Skew Estimation using Adaptive Radial Projection},
   author={Luan, Pham and Tuan Anh, Tran},
+  url={https://github.com/phamquiluan/jdeskew},
   year={2022}
 }
 ```
