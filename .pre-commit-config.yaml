@@ -9,6 +9,10 @@ repos:
   - id: detect-private-key
   - id: end-of-file-fixer
   - id: check-added-large-files
+- repo: https://github.com/igorshubovych/markdownlint-cli
+  rev: v0.31.1
+  hooks:
+  - id: markdownlint
 - repo: https://github.com/ambv/black
   rev: 22.3.0
   hooks:
