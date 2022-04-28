@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y python3.8 pytho
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 
-RUN pip install -U pip
+RUN pip install pip==22.0.3
 
 WORKDIR /code
 COPY . .
