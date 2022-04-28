@@ -7,10 +7,18 @@
 
 ![Cover Image](https://user-images.githubusercontent.com/24642166/165683091-4091bb3c-6625-4180-93b6-86deec9a0750.gif)
 
+
 ## Installation
 
+### pip
 ```bash
-pip install -e .[dev]
+pip install jdeskew
+```
+
+### Docker
+
+```bash
+docker pull phamquiluan/jdeskew
 ```
 
 ## How-to-use
