@@ -1,1 +1,1 @@
-from .jdeskew import get_angle  # noqa
+from .estimator import get_angle  # noqa
