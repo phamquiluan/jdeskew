@@ -23,6 +23,26 @@ from jdeskew.utility import rotate
 output_image = rotate(image, angle)
 ```
 
+## Performance Comparison
+
+_CE: Correct Estimation rate_
+
+_WE: Worst Error_
+
+|                      |    AED   |   TOP80  |    CE    |    WE    |
+|:--------------------:|:--------:|:--------:|:--------:|:--------:|
+|      Our (1024)      |   0.11   |   0.07   |   0.67   | **1.13** |
+|      Our (1500)      |   0.09   |   0.05   |   0.78   | **1.13** |
+|      Our (2048)      |   0.08   | **0.04** |   0.84   | **1.13** |
+|      Our (3072)      | **0.07** | **0.04** | **0.86** | **1.13** |
+|      Our (4096)      |   0.08   | **0.04** |   0.83   |   1.18   |
+|                      |          |          |          |          |
+|      FredsDeskew     |   10.82  |   0.09   |   0.54   |    109   |
+|      PypiDeskew      |   16.59  |   0.24   |    0.2   |    141   |
+| Koo, Hyung Il et al. |   0.22   |   0.09   |   0.48   |   9.43   |
+|        CMC-MSU       |   0.27   |   0.11   |   0.43   |   23.2   |
+|     LRDE-EPITA-a     |   0.14   |   0.06   |   0.66   |   10.61  |
+
 ## Citation
 
 L. Pham, T. A. Tran, "Document Image Skew Estimation using Adaptive
