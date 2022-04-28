@@ -3,3 +3,4 @@ jdeskew.egg-info
 __pycache__
 .swp
 *.swp
+version.py
