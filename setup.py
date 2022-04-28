@@ -1,7 +1,24 @@
 """Setup file for jdeskew package."""
+import os
+
 from setuptools import find_packages, setup
 
-version = "0.0.2"
+version = None
+with open("README.md") as ref:
+    data = ref.readlines()[2]
+    version = data[data.find("version-v") + 9 : data.find("-blue")]
+    assert version is not None, data
+
+cwd = os.path.dirname(os.path.abspath(__file__))
+
+
+def __write_version_file():
+    version_path = os.path.join(cwd, "jdeskew", "version.py")
+    with open(version_path, "w") as f:
+        f.write(f"__version__ = '{version}'\n")
+
+
+__write_version_file()
 
 with open("README.md", encoding="utf-8") as f:
     long_description = f.read()
