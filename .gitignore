@@ -1,3 +1,5 @@
 env
 jdeskew.egg-info
 __pycache__
+.swp
+*.swp
