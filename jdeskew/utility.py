@@ -1,3 +1,4 @@
+"""Utility."""
 import cv2
 
 

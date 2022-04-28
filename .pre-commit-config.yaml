@@ -14,6 +14,10 @@ repos:
   hooks:
   - id: markdownlint
   - id: markdownlint-fix
+- repo: https://github.com/FalconSocial/pre-commit-mirrors-pep257
+  sha: f464d46624a959c6969ce6bcf2cd531cdeefb85a
+  hooks:
+  - id: pep257
 - repo: https://github.com/PyCQA/docformatter
   rev: v1.4
   hooks:
