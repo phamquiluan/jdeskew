@@ -77,15 +77,16 @@ def _get_angle_radial_projection(m, angle_max=None, num=None, W=None):
 def get_angle(image, vertical_image_shape=None, angle_max=None):
     assert isinstance(image, np.ndarray), image
 
-    if vertical_image_shape is None:
-        vertical_image_shape = 300
+    # if vertical_image_shape is None:
+    #     vertical_image_shape = 512
 
     if angle_max is None:
         angle_max = 15
 
     # resize
-    ratio = vertical_image_shape / image.shape[0]
-    image = cv2.resize(image, None, fx=ratio, fy=ratio)
+    if vertical_image_shape is not None:
+        ratio = vertical_image_shape / image.shape[0]
+        image = cv2.resize(image, None, fx=ratio, fy=ratio)
 
     m = _get_fft_magnitude(image)
     a = _get_angle_radial_projection(m, angle_max=angle_max)

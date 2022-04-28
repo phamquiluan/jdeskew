@@ -13,6 +13,7 @@ repos:
   rev: v0.31.1
   hooks:
   - id: markdownlint
+  - id: markdownlint-fix
 - repo: https://github.com/ambv/black
   rev: 22.3.0
   hooks:

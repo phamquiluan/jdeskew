@@ -10,7 +10,7 @@
 </div>
 
 
-## Installation 
+## Installation
 
 ```bash
 pip install -e .[dev]
