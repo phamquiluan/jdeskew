@@ -1,10 +1,11 @@
+"""Setup file for jdeskew package."""
 from setuptools import find_packages, setup
 
 setup(
     name="jdeskew",
     description="Document Image Skew Estimation using Adaptive Radial Projection",
     author="Luan Pham",
-    version="v0.0.1",
+    version="0.0.1",
     author_email="phamquiluan@gmail.com",
     packages=find_packages(),
     include_package_data=True,
