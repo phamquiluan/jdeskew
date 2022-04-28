@@ -1,10 +1,10 @@
 FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update
-RUN apt-get upgrade -y
+RUN apt-get update && apt-get install --no-install-recommends -y python3 python3-dev python3-pip ffmpeg \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install -y python3 python3-dev python3-pip ffmpeg
 RUN pip install -U pip
 
 WORKDIR /code
