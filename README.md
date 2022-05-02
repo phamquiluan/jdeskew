@@ -59,7 +59,7 @@ Radial Projection", 2022.
 
 ```latex
 @misc{luandise2022,
-  title={Document Image Skew Estimation using Adaptive Radial Projection},
+  title={ADAPTIVE RADIAL PROJECTION ON FOURIER MAGNITUDE SPECTRUM FOR DOCUMENT IMAGE SKEW ESTIMATION},
   author={Luan Pham, Hao Hoang, Toan Mai, and Tuan Anh Tran},
   url={https://github.com/phamquiluan/jdeskew},
   year={2022}
