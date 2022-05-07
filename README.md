@@ -8,6 +8,7 @@
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/dependency-review.yml/badge.svg)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-package.yml/badge.svg)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/docker-build-and-push.yml/badge.svg)
+![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-publish.yml/badge.svg)
 
 
 ![Cover Image](https://user-images.githubusercontent.com/24642166/165683091-4091bb3c-6625-4180-93b6-86deec9a0750.gif)
