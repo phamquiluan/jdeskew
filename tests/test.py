@@ -9,13 +9,13 @@ from jdeskew.utility import rotate
 
 
 def test_basic():
-    """test basic."""
+    """Test basic."""
     image = np.zeros((512, 512), dtype=np.uint8)
     assert get_angle(image) == 0.0
 
 
 def test_text_image_angle_range_10():
-    """test_text_image_angle_range_10."""
+    """Test_text_image_angle_range_10."""
     image = cv2.imread(path.join(path.dirname(__file__), "test.png"))
     for angle in range(-10, 10):
         skew_image = rotate(image, angle=angle, resize=False)
@@ -24,7 +24,7 @@ def test_text_image_angle_range_10():
 
 
 def test_text_image_angle_range_44():
-    """test_text_image_angle_range_44."""
+    """Test_text_image_angle_range_44."""
     image = cv2.imread(path.join(path.dirname(__file__), "test.png"))
     for angle in range(-44, 44):
         skew_image = rotate(image, angle=angle, resize=False)
