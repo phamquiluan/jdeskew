@@ -1,3 +1,4 @@
+"""Tests."""
 from os import path
 
 import cv2
@@ -8,13 +9,26 @@ from jdeskew.utility import rotate
 
 
 def test_basic():
+    """test basic."""
     image = np.zeros((512, 512), dtype=np.uint8)
     assert get_angle(image) == 0.0
 
 
-def test_text_image_multiple_angle():
+def test_text_image_angle_range_10():
+    """test_text_image_angle_range_10."""
     image = cv2.imread(path.join(path.dirname(__file__), "test.png"))
     for angle in range(-10, 10):
         skew_image = rotate(image, angle=angle, resize=False)
         estimated_angle = get_angle(skew_image, vertical_image_shape=512)
+        assert abs(angle + estimated_angle) < 0.5, f"{angle} - {estimated_angle}"
+
+
+def test_text_image_angle_range_44():
+    """test_text_image_angle_range_44."""
+    image = cv2.imread(path.join(path.dirname(__file__), "test.png"))
+    for angle in range(-44, 44):
+        skew_image = rotate(image, angle=angle, resize=False)
+        estimated_angle = get_angle(
+            skew_image, vertical_image_shape=512, angle_max=44.9
+        )
         assert abs(angle + estimated_angle) < 0.5, f"{angle} - {estimated_angle}"
