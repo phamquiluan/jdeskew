@@ -1,3 +1,4 @@
+"""Skew Estimator."""
 import cv2
 import numpy as np
 
@@ -44,6 +45,14 @@ def _get_fft_magnitude(image):
 
 
 def _get_angle_radial_projection(m, angle_max=None, num=None, W=None):
+    """Get angle via radial projection.
+
+    Arguments:
+    ------------
+    angle_max : float
+    num : int
+      number of angles to generate between 1 degree
+    """
     assert m.shape[0] == m.shape[1]
     r = c = m.shape[0] // 2
 
@@ -53,7 +62,7 @@ def _get_angle_radial_projection(m, angle_max=None, num=None, W=None):
     if num is None:
         num = 20
 
-    tr = np.linspace(-1 * angle_max, angle_max, angle_max * num * 2) / 180 * np.pi
+    tr = np.linspace(-1 * angle_max, angle_max, int(angle_max * num * 2)) / 180 * np.pi
     profile_arr = tr.copy()
 
     def f(t):
@@ -74,7 +83,17 @@ def _get_angle_radial_projection(m, angle_max=None, num=None, W=None):
     return a
 
 
-def get_angle(image, vertical_image_shape=None, angle_max=None):
+def get_angle(
+    image: np.ndarray, vertical_image_shape: int = None, angle_max: float = None
+):
+    """Getting angle from a given document image.
+
+    image : np.ndarray
+    vertical_image_shape : int
+      resize image as preprocessing
+    angle_max : float
+      maximum angle to searching
+    """
     assert isinstance(image, np.ndarray), image
 
     # if vertical_image_shape is None:
