@@ -1,0 +1,12 @@
+build:
+  gpu: false
+  run:
+    - "apt-get update -y"
+  system_packages:
+    - "ffmpeg"
+  python_version: "3.8"
+  python_packages:
+    - "pillow==9.1.0"
+  pre_install:
+    - "git clone https://github.com/phamquiluan/jdeskew.git && cd jdeskew && pip install .[dev]"
+predict: "estimator.py:Estimator"
