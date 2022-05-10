@@ -11,7 +11,7 @@ from jdeskew.estimator import get_angle
 class Estimator(BasePredictor):
     """Cog estimator."""
 
-    def predict(self, input_path: Path = Input()) -> Dict:  # noqa: R0201
+    def predict(self, input_path: Path = Input()) -> Dict:
         """Run a single prediction on the model."""
         im = np.array(Image.open(str(input_path)))
         angle = get_angle(im)
