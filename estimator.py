@@ -1,4 +1,4 @@
-"""This file is for cog users."""
+"""Estimator for cog users."""
 from typing import Dict
 
 import numpy as np
@@ -11,8 +11,8 @@ from jdeskew.estimator import get_angle
 class Estimator(BasePredictor):
     """Cog estimator."""
 
-    def predict(self, input: Path = Input()) -> Dict:
+    def predict(self, input_path: Path = Input()) -> Dict:  # noqa: R0201
         """Run a single prediction on the model."""
-        im = np.array(Image.open(str(input)))
+        im = np.array(Image.open(str(input_path)))
         angle = get_angle(im)
         return {"angle": angle}
