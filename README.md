@@ -13,21 +13,23 @@
 
 ![Cover Image](https://user-images.githubusercontent.com/24642166/165683091-4091bb3c-6625-4180-93b6-86deec9a0750.gif)
 
-## Installation
+## I. Installation
 
-### pip
+### I.1. pip
 
 ```bash
 pip install jdeskew
 ```
 
-### Docker
+### I.2. Docker
 
 ```bash
 docker pull phamquiluan/jdeskew
 ```
 
-## How-to-use
+## II. How-to-use
+
+### II.1. using python
 
 ```python
 from jdeskew.estimator import get_angle
@@ -36,6 +38,22 @@ angle = get_angle(image)
 from jdeskew.utility import rotate
 output_image = rotate(image, angle)
 ```
+
+### II.2. using [cog](https://github.com/replicate/cog)
+
+```bash
+cog build --debug
+cog predict -i input=@skew.png
+
+# Output:
+# Running prediction...
+# {
+#   "angle": -0.12520868113522532
+# }
+```
+
+
+
 
 ## Performance Comparison on DISE 2021
 
