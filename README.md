@@ -39,6 +39,8 @@ pip install jdeskew
 
 ### Docker
 
+https://hub.docker.com/r/phamquiluan/jdeskew/tags
+
 ```bash
 docker pull phamquiluan/jdeskew
 ```
