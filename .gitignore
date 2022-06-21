@@ -4,3 +4,4 @@ __pycache__
 .swp
 *.swp
 version.py
+.ipynb_checkpoints
