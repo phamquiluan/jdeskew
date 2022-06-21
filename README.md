@@ -77,15 +77,14 @@ WE: Worst Error
 
 ## Citation
 
-L. Pham, T. A. Tran, "Document Image Skew Estimation using Adaptive
-Radial Projection", 2022.
+L. Pham, H. Hoang, X.T. Mai, T. A. Tran, "Adaptive Radial Projection on Fourier Magnitude Spectrum for Document Image Skew Estimation", ICIP, 2022.
 
 ```latex
-@misc{luandise2022,
-  title={ADAPTIVE RADIAL PROJECTION ON FOURIER MAGNITUDE SPECTRUM FOR
-DOCUMENT IMAGE SKEW ESTIMATION},
+@inproceedings{pham2021dise,
+  title={Adaptive Radial Projection on Fourier Magnitude Spectrum for Document Image Skew Estimation},
   author={Luan Pham, Hao Hoang, Toan Mai, and Tuan Anh Tran},
-  url={https://github.com/phamquiluan/jdeskew},
-  year={2022}
+  booktitle={2022 29th International Conference on Image Processing (ICIP)},
+  year={2022},
+  organization={IEEE}
 }
 ```
