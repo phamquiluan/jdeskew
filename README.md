@@ -75,6 +75,16 @@ WE: Worst Error
 |      Our (3072)      | **0.07** | **0.04** | **0.86** | **1.13** |
 |      Our (4096)      |   0.08   | **0.04** |   0.83   |   1.18   |
 
+## DISE 2021 Dataset
+
+This datasets are built upon three other datasets: DISEC 2013, RVL, RDCL. So I urge you to respect their LICENSE. 
+
+| Dataset Name          | URL                                                                                |
+|-----------------------|------------------------------------------------------------------------------------|
+| DISE 2021 (45 degree) | https://drive.google.com/file/d/1a-a6aOqdsghjeHGLnCLsDs7NoJIus-Pw/view?usp=sharing |
+| DISE 2021 (15 degree) | https://drive.google.com/file/d/1BLiuu-j28dbuPFi4n3C0KuV6vXGmB0qS/view?usp=sharing |
+
+
 ## Citation
 
 L. Pham, H. Hoang, X.T. Mai, T. A. Tran, "Adaptive Radial Projection on Fourier Magnitude Spectrum for Document Image Skew Estimation", ICIP, 2022.
