@@ -10,26 +10,42 @@
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/docker-build-and-push.yml/badge.svg)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-publish.yml/badge.svg)
 
-
 ![Cover Image](https://user-images.githubusercontent.com/24642166/165683091-4091bb3c-6625-4180-93b6-86deec9a0750.gif)
 
-## I. Installation
+**Table of Contents**
+- [Document Image Skew Estimation](#document-image-skew-estimation)
+  * [Installation](#installation)
+    + [pip](#pip)
+    + [Docker](#docker)
+  * [How-to-use](#how-to-use)
+    + [using python](#using-python)
+    + [using cog](#using-cog)
+  * [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
+  * [DISE 2021 Dataset](#dise-2021-dataset)
+  * [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
+  * [Citation](#citation)
 
-### I.1. pip
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
+
+## Installation
+
+### pip
 
 ```bash
 pip install jdeskew
 ```
 
-### I.2. Docker
+### Docker
 
 ```bash
 docker pull phamquiluan/jdeskew
 ```
 
-## II. How-to-use
+## How-to-use
 
-### II.1. using python
+### using python
 
 ```python
 from jdeskew.estimator import get_angle
@@ -39,7 +55,9 @@ from jdeskew.utility import rotate
 output_image = rotate(image, angle)
 ```
 
-### II.2. using [cog](https://github.com/replicate/cog)
+### using cog
+
+https://github.com/replicate/cog
 
 ```bash
 cog build --debug
@@ -84,7 +102,7 @@ This datasets are built upon three other datasets: DISEC 2013, RVL, RDCL. So I u
 | DISE 2021 (45 degree) | https://drive.google.com/file/d/1a-a6aOqdsghjeHGLnCLsDs7NoJIus-Pw/view?usp=sharing |
 | DISE 2021 (15 degree) | https://drive.google.com/file/d/1BLiuu-j28dbuPFi4n3C0KuV6vXGmB0qS/view?usp=sharing |
 
-## Reproducibility \& Evaluation Code
+## Reproducibility and Evaluation Code
 
 Check the [reproduce.ipynb](reproduce.ipynb) file
 
