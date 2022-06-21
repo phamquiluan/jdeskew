@@ -95,7 +95,7 @@ WE: Worst Error
 
 ## DISE 2021 Dataset
 
-This datasets are built upon three other datasets: DISEC 2013, RVL, RDCL. So I urge you to respect their LICENSE. 
+This datasets are built upon three other datasets: DISEC 2013, RVL-CDIP, RDCL 2017. So I urge you to respect their LICENSE. 
 
 | Dataset Name          | URL                                                                                |
 |-----------------------|------------------------------------------------------------------------------------|
