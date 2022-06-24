@@ -20,13 +20,13 @@
   * [How-to-use](#how-to-use)
     + [using python](#using-python)
     + [using cog](#using-cog)
+  * [Download Paper](#download-paper)
   * [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
   * [DISE 2021 Dataset](#dise-2021-dataset)
   * [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
   * [Citation](#citation)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 
 ## Installation
@@ -73,7 +73,9 @@ cog predict -i input=@skew.png
 ```
 
 
+## Download Paper
 
+pre-print version: https://phamquiluan.github.io/files/paper2.pdf
 
 ## Performance Comparison on DISE 2021
 
