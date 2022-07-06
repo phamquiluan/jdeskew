@@ -15,19 +15,20 @@
 **Table of Contents**
 
 - [Document Image Skew Estimation](#document-image-skew-estimation)
-  - [Installation](#installation)
-    - [pip](#pip)
-    - [Docker](#docker)
-  - [How-to-use](#how-to-use)
-    - [using python](#using-python)
-    - [using cog](#using-cog)
-  - [Download Paper](#download-paper)
-  - [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
-  - [DISE 2021 Dataset](#dise-2021-dataset)
-  - [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
-  - [Citation](#citation)
+  * [Installation](#installation)
+    + [pip](#pip)
+  * [How-to-use](#how-to-use)
+    + [using python](#using-python)
+    + [Docker](#docker)
+    + [using cog](#using-cog)
+  * [Download Paper](#download-paper)
+  * [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
+  * [DISE 2021 Dataset](#dise-2021-dataset)
+  * [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
+  * [Citation](#citation)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## Installation
 
@@ -35,14 +36,6 @@
 
 ```bash
 pip install jdeskew
-```
-
-### Docker
-
-https://hub.docker.com/r/phamquiluan/jdeskew/tags
-
-```bash
-docker pull phamquiluan/jdeskew
 ```
 
 ## How-to-use
@@ -56,6 +49,23 @@ angle = get_angle(image)
 from jdeskew.utility import rotate
 output_image = rotate(image, angle)
 ```
+
+### Docker
+
+https://hub.docker.com/r/phamquiluan/jdeskew/tags
+
+
+```bash
+# build 
+DOCKER_BUILDKIT=1 docker build -t jdeskew .
+
+# run
+docker run -p 8000:80 jdeskew
+
+# test
+curl -v -F file=@sample.png localhost:8000/predict
+```
+
 
 ### using cog
 
