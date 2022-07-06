@@ -33,7 +33,6 @@ jobs:
           name: "Upload coverage"
           command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
 
-
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
