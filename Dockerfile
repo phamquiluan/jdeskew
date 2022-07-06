@@ -7,6 +7,9 @@ RUN apt-get update && apt-get install --no-install-recommends -y python3.8 pytho
 
 RUN pip install pip==22.0.3
 
-WORKDIR /code
-COPY . .
+# Copy source code
+WORKDIR /app
+COPY . /app/
+
 RUN pip install .[dev]
+ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
