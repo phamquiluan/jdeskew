@@ -35,6 +35,15 @@ setup(
     include_package_data=True,
     install_requires=["numpy", "opencv-python"],
     extras_require={
-        "dev": ["black", "pytest", "coverage", "pre-commit", "pytest-xdist"]
+        "dev": [
+            "black",
+            "pytest",
+            "coverage",
+            "pre-commit",
+            "pytest-xdist",
+            "fastapi",
+            "uvicorn[standard]",
+            "python-multipart",
+        ]
     },
 )
