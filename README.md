@@ -1,9 +1,9 @@
 # Document Image Skew Estimation
 
-[![pypi package](https://img.shields.io/badge/version-v0.0.9-blue)](https://pypi.org/project/jdeskew)
+[![pypi package](https://img.shields.io/badge/version-v0.1.0-blue)](https://pypi.org/project/jdeskew)
 [![CircleCI](https://circleci.com/gh/phamquiluan/jdeskew/tree/master.svg?style=shield&circle-token=37f6b4ef126f3e985db7c624d1d76f22a223cf41)](https://circleci.com/gh/phamquiluan/jdeskew/tree/master)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Coverage)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=phamquiluan/jdeskew&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Grade)
 [![Downloads](https://static.pepy.tech/personalized-badge/jdeskew?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/jdeskew)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/dependency-review.yml/badge.svg)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-package.yml/badge.svg)
@@ -13,21 +13,21 @@
 ![Cover Image](https://user-images.githubusercontent.com/24642166/165683091-4091bb3c-6625-4180-93b6-86deec9a0750.gif)
 
 **Table of Contents**
+
 - [Document Image Skew Estimation](#document-image-skew-estimation)
-  * [Installation](#installation)
-    + [pip](#pip)
-    + [Docker](#docker)
-  * [How-to-use](#how-to-use)
-    + [using python](#using-python)
-    + [using cog](#using-cog)
-  * [Download Paper](#download-paper)
-  * [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
-  * [DISE 2021 Dataset](#dise-2021-dataset)
-  * [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
-  * [Citation](#citation)
+  - [Installation](#installation)
+    - [pip](#pip)
+    - [Docker](#docker)
+  - [How-to-use](#how-to-use)
+    - [using python](#using-python)
+    - [using cog](#using-cog)
+  - [Download Paper](#download-paper)
+  - [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
+  - [DISE 2021 Dataset](#dise-2021-dataset)
+  - [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
+  - [Citation](#citation)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## Installation
 
@@ -72,7 +72,6 @@ cog predict -i input=@skew.png
 # }
 ```
 
-
 ## Download Paper
 
 pre-print version: https://phamquiluan.github.io/files/paper2.pdf
@@ -83,13 +82,13 @@ CE: Correct Estimation rate
 
 WE: Worst Error
 
-|                      |    AED   |   TOP80  |    CE    |    WE    |
-|:--------------------:|:--------:|:--------:|:--------:|:--------:|
-|      FredsDeskew     |   10.82  |   0.09   |   0.54   |    109   |
-|      PypiDeskew      |   16.59  |   0.24   |    0.2   |    141   |
+|                      |   AED    |  TOP80   |    CE    |    WE    |
+| :------------------: | :------: | :------: | :------: | :------: |
+|     FredsDeskew      |  10.82   |   0.09   |   0.54   |   109    |
+|      PypiDeskew      |  16.59   |   0.24   |   0.2    |   141    |
 | Koo, Hyung Il et al. |   0.22   |   0.09   |   0.48   |   9.43   |
-|        CMC-MSU       |   0.27   |   0.11   |   0.43   |   23.2   |
-|     LRDE-EPITA-a     |   0.14   |   0.06   |   0.66   |   10.61  |
+|       CMC-MSU        |   0.27   |   0.11   |   0.43   |   23.2   |
+|     LRDE-EPITA-a     |   0.14   |   0.06   |   0.66   |  10.61   |
 |                      |          |          |          |          |
 |      Our (1024)      |   0.11   |   0.07   |   0.67   | **1.13** |
 |      Our (1500)      |   0.09   |   0.05   |   0.78   | **1.13** |
@@ -99,10 +98,10 @@ WE: Worst Error
 
 ## DISE 2021 Dataset
 
-This datasets are built upon three other datasets: DISEC 2013, RVL-CDIP, RDCL 2017. So I urge you to respect their LICENSE. 
+This datasets are built upon three other datasets: DISEC 2013, RVL-CDIP, RDCL 2017. So I urge you to respect their LICENSE.
 
 | Dataset Name          | URL                                                                                |
-|-----------------------|------------------------------------------------------------------------------------|
+| --------------------- | ---------------------------------------------------------------------------------- |
 | DISE 2021 (45 degree) | https://drive.google.com/file/d/1a-a6aOqdsghjeHGLnCLsDs7NoJIus-Pw/view?usp=sharing |
 | DISE 2021 (15 degree) | https://drive.google.com/file/d/1BLiuu-j28dbuPFi4n3C0KuV6vXGmB0qS/view?usp=sharing |
 
