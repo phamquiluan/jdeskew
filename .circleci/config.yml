@@ -3,12 +3,17 @@ version: 2.1
 orbs:
   python: circleci/python@1.2
 
-jobs:
-  build-and-test:
+executors:
+  my-executor:
     docker:
       - image: cimg/python:3.9
+    working_directory: /code
     environment:
       TZ: "Asia/Ho_Chi_Minh"
+
+jobs:
+  build-and-test:
+    executor: my-executor
     steps:
       - checkout
       - run:
@@ -23,17 +28,26 @@ jobs:
             coverage run -m pytest tests/test.py
             coverage report -i
             coverage xml -i
+      - persist_to_workspace:
+          root: /code
+          paths:
+            - coverage.yaml
+  upload-coverage:
+    executor: my-executor
+    steps:
+      - attach_workspace:
+          at: /code/workspace
       - run:
           name: "Upload coverage"
-          when:
-            not:
-              equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
           command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
 
 workflows:
   main-flow:
     jobs:
       - build-and-test
+      - upload-coverage:
+          requires:
+            - build-and-test
   code-rot-check-daily:
     triggers:
       - schedule:
