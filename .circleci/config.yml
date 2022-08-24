@@ -20,7 +20,9 @@ jobs:
           command: sudo apt-get update -y
       - run:
           name: "Build JDeskew"
-          command: pip install -e .[dev]
+          command: |
+            pip install -U pip
+            pip install -e .[dev]
       - run:
           name: "Run test"
           command: |
