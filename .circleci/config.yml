@@ -37,7 +37,7 @@ jobs:
     executor: my-executor
     steps:
       - attach_workspace:
-          at: /tmp/workspace
+          at: ~/project
       - run:
           name: "Upload coverage"
           command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
