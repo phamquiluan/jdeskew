@@ -7,7 +7,7 @@ executors:
   my-executor:
     docker:
       - image: cimg/python:3.9
-    working_directory: /code
+    working_directory: /tmp
     environment:
       TZ: "Asia/Ho_Chi_Minh"
 
@@ -29,14 +29,14 @@ jobs:
             coverage report -i
             coverage xml -i
       - persist_to_workspace:
-          root: /code
+          root: /tmp
           paths:
             - coverage.yaml
   upload-coverage:
     executor: my-executor
     steps:
       - attach_workspace:
-          at: /code/workspace
+          at: /tmp
       - run:
           name: "Upload coverage"
           command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
