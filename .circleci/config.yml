@@ -15,6 +15,7 @@ jobs:
   build-and-test:
     executor: my-executor
     steps:
+      - run: mkdir -p workspace && cd workspace
       - checkout
       - run:
           name: "Install prerequisites"
@@ -29,14 +30,14 @@ jobs:
             coverage report -i
             coverage xml -i
       - persist_to_workspace:
-          root: /tmp
+          root: workspace
           paths:
             - coverage.yaml
   upload-coverage:
     executor: my-executor
     steps:
       - attach_workspace:
-          at: /tmp
+          at: /tmp/workspace
       - run:
           name: "Upload coverage"
           command: bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r coverage.xml
