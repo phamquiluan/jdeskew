@@ -32,7 +32,7 @@ jobs:
       - persist_to_workspace:
           root: ~/project
           paths:
-            - coverage.yaml
+            - coverage.xml
   upload-coverage:
     executor: my-executor
     steps:
