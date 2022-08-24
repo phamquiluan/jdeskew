@@ -7,7 +7,6 @@ executors:
   my-executor:
     docker:
       - image: cimg/python:3.9
-    working_directory: /tmp
     environment:
       TZ: "Asia/Ho_Chi_Minh"
 
@@ -15,7 +14,6 @@ jobs:
   build-and-test:
     executor: my-executor
     steps:
-      - run: mkdir -p workspace && cd workspace
       - checkout
       - run:
           name: "Install prerequisites"
@@ -30,7 +28,7 @@ jobs:
             coverage report -i
             coverage xml -i
       - persist_to_workspace:
-          root: workspace
+          root: ~/project
           paths:
             - coverage.yaml
   upload-coverage:
