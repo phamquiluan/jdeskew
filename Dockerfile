@@ -12,4 +12,5 @@ WORKDIR /app
 COPY . /app/
 
 RUN pip install .[dev]
+EXPOSE 80
 ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
