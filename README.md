@@ -84,7 +84,9 @@ cog predict -i input=@skew.png
 
 ## Download Paper
 
-https://ieeexplore.ieee.org/document/9897910
+Link1: https://ieeexplore.ieee.org/document/9897910
+Link2: https://www.researchgate.net/publication/364320913_ADAPTIVE_RADIAL_PROJECTION_ON_FOURIER_MAGNITUDE_SPECTRUM_FOR_DOCUMENT_IMAGE_SKEW_ESTIMATION
+
 
 ## Performance Comparison on DISE 2021
 
