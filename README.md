@@ -84,7 +84,7 @@ cog predict -i input=@skew.png
 
 ## Download Paper
 
-pre-print version: https://phamquiluan.github.io/files/paper2.pdf
+https://ieeexplore.ieee.org/document/9897910
 
 ## Performance Comparison on DISE 2021
 
