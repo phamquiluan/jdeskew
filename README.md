@@ -9,6 +9,8 @@
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-package.yml/badge.svg)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/docker-build-and-push.yml/badge.svg)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-publish.yml/badge.svg)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/adaptive-radial-projection-on-fourier/document-image-skew-estimation-on-dise-2021)](https://paperswithcode.com/sota/document-image-skew-estimation-on-dise-2021?p=adaptive-radial-projection-on-fourier)
+
 
 ![Cover Image](https://user-images.githubusercontent.com/24642166/165683091-4091bb3c-6625-4180-93b6-86deec9a0750.gif)
 
