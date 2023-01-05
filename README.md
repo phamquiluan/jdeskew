@@ -1,6 +1,6 @@
 # Document Image Skew Estimation
 
-[![pypi package](https://img.shields.io/badge/version-v0.2.0-blue)](https://pypi.org/project/jdeskew)
+[![pypi package](https://img.shields.io/badge/version-v0.2.1-blue)](https://pypi.org/project/jdeskew)
 [![CircleCI](https://circleci.com/gh/phamquiluan/jdeskew/tree/master.svg?style=shield&circle-token=37f6b4ef126f3e985db7c624d1d76f22a223cf41)](https://circleci.com/gh/phamquiluan/jdeskew/tree/master)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Coverage)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Grade)
@@ -17,17 +17,17 @@
 **Table of Contents**
 
 - [Document Image Skew Estimation](#document-image-skew-estimation)
-  * [Installation](#installation)
-    + [pip](#pip)
-  * [How-to-use](#how-to-use)
-    + [using python](#using-python)
-    + [Docker](#docker)
-    + [using cog](#using-cog)
-  * [Download Paper](#download-paper)
-  * [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
-  * [DISE 2021 Dataset](#dise-2021-dataset)
-  * [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
-  * [Citation](#citation)
+  - [Installation](#installation)
+    - [pip](#pip)
+  - [How-to-use](#how-to-use)
+    - [using python](#using-python)
+    - [Docker](#docker)
+    - [using cog](#using-cog)
+  - [Download Paper](#download-paper)
+  - [Performance Comparison on DISE 2021](#performance-comparison-on-dise-2021)
+  - [DISE 2021 Dataset](#dise-2021-dataset)
+  - [Reproducibility and Evaluation Code](#reproducibility-and-evaluation-code)
+  - [Citation](#citation)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
