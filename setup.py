@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 
 version = None
 with open("README.md") as ref:
-    data = ref.readlines()[2]
+    data = ref.readlines()[4]
     version = data[data.find("version-v") + 9 : data.find("-blue")]
     assert version is not None, data
 
