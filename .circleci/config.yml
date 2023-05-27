@@ -49,7 +49,7 @@ workflows:
       - upload-coverage:
           requires:
             - build-and-test
-  code-rot-check-daily:
+  build-daily:
     triggers:
       - schedule:
           cron: "55 3 * * *"
