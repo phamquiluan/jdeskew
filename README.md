@@ -2,7 +2,7 @@
 
 *To my love, Jenna*
 
-[![pypi package](https://img.shields.io/badge/version-v0.2.1-blue)](https://pypi.org/project/jdeskew)
+[![pypi package](https://img.shields.io/pypi/v/jdeskew.svg)](https://pypi.org/project/jdeskew)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/phamquiluan/jdeskew/tree/master.svg?style=svg&circle-token=f409daaab0e6671c81bb4b266b387fe933c131eb)](https://dl.circleci.com/status-badge/redirect/gh/phamquiluan/jdeskew/tree/master)
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Coverage)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Grade)
