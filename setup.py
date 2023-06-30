@@ -33,7 +33,7 @@ setup(
     author_email="phamquiluan@gmail.com",
     packages=find_packages(),
     include_package_data=True,
-    install_requires=["numpy", "opencv-python"],
+    install_requires=["numpy", "opencv-python-headless"],
     extras_require={
         "dev": [
             "black",
