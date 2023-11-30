@@ -139,3 +139,7 @@ L. Pham, H. Hoang, X.T. Mai, T. A. Tran, "Adaptive Radial Projection on Fourier 
   organization={IEEE}
 }
 ```
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=phamquiluan/jdeskew&type=Date)](https://star-history.com/#phamquiluan/jdeskew&Date)
