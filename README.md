@@ -1,6 +1,6 @@
 # Document Image Skew Estimation
 
-*To my love, Jenna*
+*To Jenna*
 
 [![pypi package](https://img.shields.io/pypi/v/jdeskew.svg)](https://pypi.org/project/jdeskew)
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/phamquiluan/jdeskew/tree/master.svg?style=svg&circle-token=f409daaab0e6671c81bb4b266b387fe933c131eb)](https://dl.circleci.com/status-badge/redirect/gh/phamquiluan/jdeskew/tree/master)
