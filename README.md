@@ -120,6 +120,8 @@ This datasets are built upon three other datasets: DISEC 2013, RVL-CDIP, RDCL 20
 | DISE 2021 (45 degree) | https://drive.google.com/file/d/1a-a6aOqdsghjeHGLnCLsDs7NoJIus-Pw/view?usp=sharing |
 | DISE 2021 (15 degree) | https://drive.google.com/file/d/1BLiuu-j28dbuPFi4n3C0KuV6vXGmB0qS/view?usp=sharing |
 
+Can also download from Zenodo: https://zenodo.org/records/12570649
+
 ## Reproducibility and Evaluation Code
 
 Check the [reproduce.ipynb](reproduce.ipynb) file
