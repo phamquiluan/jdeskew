@@ -21,7 +21,8 @@ def rotate(image, angle, resize=True, border_mode=None, border_value=None):
         M=M,
         dsize=(w, h),
         # flags=cv2.INTER_CUBIC,
-        flags=cv2.INTER_NEAREST,
+        # flags=cv2.INTER_NEAREST,
+        flags=cv2.INTER_LINEAR,
         borderMode=border_mode,
         borderValue=None if border_mode == cv2.BORDER_REPLICATE else border_value,
     )
