@@ -20,7 +20,7 @@ def rotate(image, angle, resize=True, border_mode=None, border_value=None):
         src=image,
         M=M,
         dsize=(w, h),
-        # flags=cv2.INTER_CUBIC,
+        
         # flags=cv2.INTER_NEAREST,
         flags=cv2.INTER_LINEAR,
         borderMode=border_mode,
