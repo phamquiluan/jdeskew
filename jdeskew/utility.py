@@ -23,7 +23,7 @@ def rotate(image, angle, resize=True, border_mode=None, border_value=None, flags
         src=image,
         M=M,
         dsize=(w, h),
-        flags = flags,
+        flags=flags,
         borderMode=border_mode,
         borderValue=None if border_mode == cv2.BORDER_REPLICATE else border_value,
     )
