@@ -13,6 +13,9 @@ def rotate(image, angle, resize=True, border_mode=None, border_value=None, flags
     """
     if border_mode is None:
         border_mode = cv2.BORDER_CONSTANT
+    if flags is None:
+        # flags=cv2.INTER_NEAREST
+        flags = cv2.INTER_LINEAR
 
     h, w = image.shape[:2]
     M = cv2.getRotationMatrix2D(center=(w // 2, h // 2), angle=angle, scale=1.0)
@@ -20,9 +23,7 @@ def rotate(image, angle, resize=True, border_mode=None, border_value=None, flags
         src=image,
         M=M,
         dsize=(w, h),
-        # flags=cv2.INTER_NEAREST,
-        if flags is None:
-            flags = cv2.INTER_LINEAR
+        flags = flags,
         borderMode=border_mode,
         borderValue=None if border_mode == cv2.BORDER_REPLICATE else border_value,
     )
