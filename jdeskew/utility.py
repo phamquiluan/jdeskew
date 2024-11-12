@@ -2,7 +2,7 @@
 import cv2
 
 
-def rotate(image, angle, resize=True, border_mode=None, border_value=None):
+def rotate(image, angle, resize=True, border_mode=None, border_value=None, flags=None):
     """Rotate input image respect to a given angle.
 
     Params:
@@ -20,9 +20,9 @@ def rotate(image, angle, resize=True, border_mode=None, border_value=None):
         src=image,
         M=M,
         dsize=(w, h),
-        
         # flags=cv2.INTER_NEAREST,
-        flags=cv2.INTER_LINEAR,
+        if flags is None:
+            flags = cv2.INTER_LINEAR
         borderMode=border_mode,
         borderValue=None if border_mode == cv2.BORDER_REPLICATE else border_value,
     )
