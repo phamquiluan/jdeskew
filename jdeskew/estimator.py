@@ -1,9 +1,10 @@
 """Skew Estimator."""
 import cv2
 import numpy as np
+from typing import Optional
 
 
-def _ensure_gray(image):
+def _ensure_gray(image: np.ndarray) -> np.ndarray:
     try:
         image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     except cv2.error:
@@ -11,7 +12,7 @@ def _ensure_gray(image):
     return image
 
 
-def _ensure_optimal_square(image):
+def _ensure_optimal_square(image: np.ndarray) -> np.ndarray:
     assert image is not None, image
     nw = nh = cv2.getOptimalDFTSize(max(image.shape[:2]))
     output_image = cv2.copyMakeBorder(
@@ -26,7 +27,7 @@ def _ensure_optimal_square(image):
     return output_image
 
 
-def _get_fft_magnitude(image):
+def _get_fft_magnitude(image: np.ndarray) -> np.ndarray:
     gray = _ensure_gray(image)
     opt_gray = _ensure_optimal_square(gray)
 
@@ -35,7 +36,7 @@ def _get_fft_magnitude(image):
         ~opt_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, -10
     )
 
-    # perform fft
+    # perform fft - using fft2 to ensure square output
     dft = np.fft.fft2(opt_gray)
     shifted_dft = np.fft.fftshift(dft)
 
@@ -44,7 +45,7 @@ def _get_fft_magnitude(image):
     return magnitude
 
 
-def _get_angle_radial_projection(m, angle_max=None, num=None, W=None):
+def _get_angle_radial_projection(m: np.ndarray, angle_max: Optional[float] = None, num: Optional[int] = None) -> float:
     """Get angle via radial projection.
 
     Arguments:
@@ -57,7 +58,7 @@ def _get_angle_radial_projection(m, angle_max=None, num=None, W=None):
     r = c = m.shape[0] // 2
 
     if angle_max is None:
-        pass
+        angle_max = 15.0
 
     if num is None:
         num = 20
@@ -65,34 +66,38 @@ def _get_angle_radial_projection(m, angle_max=None, num=None, W=None):
     tr = np.linspace(-1 * angle_max, angle_max, int(angle_max * num * 2)) / 180 * np.pi
     profile_arr = tr.copy()
 
-    def f(t):
-        _f = np.vectorize(
-            lambda x: m[c + int(x * np.cos(t)), c + int(-1 * x * np.sin(t))]
-        )
-        _l = _f(range(0, r))
-        val_init = np.sum(_l)
-        return val_init
-
-    vf = np.vectorize(f)
-    li = vf(profile_arr)
+    # Pre-allocate array for better performance
+    li = np.zeros_like(tr)
+    
+    for i, t in enumerate(tr):
+        x = np.arange(0, r)
+        y = c + np.int32(x * np.cos(t))
+        x = c + np.int32(-1 * x * np.sin(t))
+        # Use boolean indexing for faster computation
+        valid_indices = (y >= 0) & (y < m.shape[0]) & (x >= 0) & (x < m.shape[1])
+        li[i] = np.sum(m[y[valid_indices], x[valid_indices]])
 
     a = tr[np.argmax(li)] / np.pi * 180
 
     if a == -1 * angle_max:
-        return 0
-    return a
+        return 0.0
+    return float(a)
 
 
 def get_angle(
-    image: np.ndarray, vertical_image_shape: int = None, angle_max: float = None
-):
+    image: np.ndarray,
+    vertical_image_shape: Optional[int] = None,
+    angle_max: Optional[float] = None
+) -> float:
     """Getting angle from a given document image.
 
-    image : np.ndarray
-    vertical_image_shape : int
-      resize image as preprocessing
-    angle_max : float
-      maximum angle to searching
+    Args:
+        image: Input image as numpy array
+        vertical_image_shape: Optional resize height for preprocessing
+        angle_max: Maximum angle to search for
+
+    Returns:
+        float: Estimated skew angle in degrees
     """
     assert isinstance(image, np.ndarray), image
 
@@ -100,7 +105,7 @@ def get_angle(
     #     vertical_image_shape = 512
 
     if angle_max is None:
-        angle_max = 15
+        angle_max = 15.0
 
     # resize
     if vertical_image_shape is not None:
