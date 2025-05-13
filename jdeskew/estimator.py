@@ -64,7 +64,6 @@ def _get_angle_radial_projection(m: np.ndarray, angle_max: Optional[float] = Non
         num = 20
 
     tr = np.linspace(-1 * angle_max, angle_max, int(angle_max * num * 2)) / 180 * np.pi
-    profile_arr = tr.copy()
 
     # Pre-allocate array for better performance
     li = np.zeros_like(tr)
