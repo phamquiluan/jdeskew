@@ -67,7 +67,7 @@ def _get_angle_radial_projection(m: np.ndarray, angle_max: Optional[float] = Non
 
     # Pre-allocate array for better performance
     li = np.zeros_like(tr)
-    
+
     for i, t in enumerate(tr):
         x = np.arange(0, r)
         y = c + np.int32(x * np.cos(t))
