@@ -40,6 +40,12 @@
 pip install jdeskew
 ```
 
+### conda
+
+```bash
+conda create --name jdeskew -c conda-forge jdeskew
+```
+
 ## How-to-use
 
 ### using python
