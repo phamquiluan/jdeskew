@@ -11,6 +11,21 @@ name = "jdeskew"
 description = "Document Image Skew Estimation using Adaptive Radial Projection"
 authors = [{name = "Luan Pham", email = "phamquiluan@gmail.com"}]
 license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
 dependencies = [
     "numpy",
     "opencv-python-headless"
