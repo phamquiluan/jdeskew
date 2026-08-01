@@ -13,7 +13,8 @@ def _ensure_gray(image: np.ndarray) -> np.ndarray:
 
 
 def _ensure_optimal_square(image: np.ndarray) -> np.ndarray:
-    assert image is not None, image
+    if image is None:
+        raise ValueError("image must not be None")
     nw = nh = cv2.getOptimalDFTSize(max(image.shape[:2]))
     output_image = cv2.copyMakeBorder(
         src=image,
@@ -46,15 +47,26 @@ def _get_fft_magnitude(image: np.ndarray) -> np.ndarray:
 
 
 def _get_angle_radial_projection(m: np.ndarray, angle_max: Optional[float] = None, num: Optional[int] = None) -> float:
-    """Get angle via radial projection.
-
-    Arguments:
-    ------------
-    angle_max : float
-    num : int
-      number of angles to generate between 1 degree
     """
-    assert m.shape[0] == m.shape[1]
+    Get angle via radial projection.
+
+    Parameters
+    ----------
+    m : np.ndarray
+        Square FFT magnitude spectrum of the image.
+    angle_max : float, optional
+        Maximum angle to search for, in degrees.
+    num : int, optional
+        Number of angles to generate between 1 degree.
+
+    Returns
+    -------
+    float
+        Estimated skew angle in degrees.
+
+    """
+    if m.shape[0] != m.shape[1]:
+        raise ValueError(f"expected a square matrix, got shape {m.shape}")
     r = c = m.shape[0] // 2
 
     if angle_max is None:
@@ -88,17 +100,26 @@ def get_angle(
     vertical_image_shape: Optional[int] = None,
     angle_max: Optional[float] = None
 ) -> float:
-    """Getting angle from a given document image.
-
-    Args:
-        image: Input image as numpy array
-        vertical_image_shape: Optional resize height for preprocessing
-        angle_max: Maximum angle to search for
-
-    Returns:
-        float: Estimated skew angle in degrees
     """
-    assert isinstance(image, np.ndarray), image
+    Get angle from a given document image.
+
+    Parameters
+    ----------
+    image : np.ndarray
+        Input image as numpy array.
+    vertical_image_shape : int, optional
+        Resize height for preprocessing.
+    angle_max : float, optional
+        Maximum angle to search for, in degrees.
+
+    Returns
+    -------
+    float
+        Estimated skew angle in degrees.
+
+    """
+    if not isinstance(image, np.ndarray):
+        raise TypeError(f"image must be a numpy array, got {type(image)}")
 
     # if vertical_image_shape is None:
     #     vertical_image_shape = 512
