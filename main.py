@@ -6,7 +6,7 @@ app = FastAPI()
 
 @app.post("/predict")
 def predict(file: UploadFile):
-    """simple predict function."""
+    """Simple predict function."""
     # read image
     import cv2
     import numpy as np
