@@ -5,11 +5,9 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Coverage)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/25553a5195074e37a01dd3370c55abaa)](https://www.codacy.com/gh/phamquiluan/jdeskew/dashboard?utm_source=github.com&utm_medium=referral&utm_content=phamquiluan/jdeskew&utm_campaign=Badge_Grade)
 [![Downloads](https://static.pepy.tech/personalized-badge/jdeskew?period=total&units=international_system&left_color=black&right_color=orange&left_text=Downloads)](https://pepy.tech/project/jdeskew)
-![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/dependency-review.yml/badge.svg)
 ![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-package.yml/badge.svg)
-![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/docker-build-and-push.yml/badge.svg)
-![example workflow](https://github.com/phamquiluan/jdeskew/actions/workflows/python-publish.yml/badge.svg)
-[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/adaptive-radial-projection-on-fourier/document-image-skew-estimation-on-dise-2021)](https://paperswithcode.com/sota/document-image-skew-estimation-on-dise-2021?p=adaptive-radial-projection-on-fourier)
+[![HF Paper](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/2603.05942)
+[![HF Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/phamquiluan/DISE-2021)
 
 
 ![Cover Image](https://user-images.githubusercontent.com/24642166/165683091-4091bb3c-6625-4180-93b6-86deec9a0750.gif)
@@ -96,6 +94,8 @@ Link1: https://ieeexplore.ieee.org/document/9897910
 
 Link2: https://www.researchgate.net/publication/364320913_ADAPTIVE_RADIAL_PROJECTION_ON_FOURIER_MAGNITUDE_SPECTRUM_FOR_DOCUMENT_IMAGE_SKEW_ESTIMATION
 
+Link3: https://huggingface.co/papers/2603.05942
+
 
 ## Performance Comparison on DISE 2021
 
@@ -126,7 +126,9 @@ This datasets are built upon three other datasets: DISEC 2013, RVL-CDIP, RDCL 20
 | DISE 2021 (45 degree) | https://drive.google.com/file/d/1a-a6aOqdsghjeHGLnCLsDs7NoJIus-Pw/view?usp=sharing |
 | DISE 2021 (15 degree) | https://drive.google.com/file/d/1BLiuu-j28dbuPFi4n3C0KuV6vXGmB0qS/view?usp=sharing |
 
-Can also download from Zenodo: https://zenodo.org/records/12570649
+Can also download from Hugging Face: https://huggingface.co/datasets/phamquiluan/DISE-2021
+
+Or from Zenodo: https://zenodo.org/records/12570649
 
 ## Reproducibility and Evaluation Code
 
@@ -145,7 +147,3 @@ L. Pham, H. Hoang, X.T. Mai, T. A. Tran, "Adaptive Radial Projection on Fourier 
   organization={IEEE}
 }
 ```
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=phamquiluan/jdeskew&type=Date)](https://star-history.com/#phamquiluan/jdeskew&Date)
