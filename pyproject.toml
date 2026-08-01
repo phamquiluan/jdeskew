@@ -64,4 +64,5 @@ exclude = '''
 [tool.pytest.ini_options]
 minversion = "6.0"
 addopts = "-ra -q"
-testpaths = [ "tests/test.png" ]
+testpaths = [ "tests" ]
+python_files = [ "test.py", "test_*.py" ]
