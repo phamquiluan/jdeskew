@@ -3,13 +3,29 @@ import cv2
 
 
 def rotate(image, angle, resize=True, border_mode=None, border_value=None, flags=None):
-    """Rotate input image respect to a given angle.
+    """
+    Rotate input image with respect to a given angle.
 
-    Params:
-    --------
-    resize (Bool) : resize to input image shape
-    border_mode : cv2.BORDER_REPLICATE, cv2.BORDER_CONSTANT
-    border_value : when border_mode == cv2.BORDER_CONSTANT
+    Parameters
+    ----------
+    image : np.ndarray
+        Input image.
+    angle : float
+        Rotation angle in degrees.
+    resize : bool
+        Resize output to the input image shape.
+    border_mode : int, optional
+        cv2.BORDER_REPLICATE or cv2.BORDER_CONSTANT.
+    border_value : optional
+        Border value used when border_mode is cv2.BORDER_CONSTANT.
+    flags : int, optional
+        OpenCV interpolation flags.
+
+    Returns
+    -------
+    np.ndarray
+        Rotated image.
+
     """
     if border_mode is None:
         border_mode = cv2.BORDER_CONSTANT
