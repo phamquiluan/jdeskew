@@ -12,6 +12,9 @@ RUN pip install pip==22.0.3
 WORKDIR /app
 COPY . /app/
 
+# Version for setuptools-scm, since git metadata is unavailable in the image
+ARG SETUPTOOLS_SCM_PRETEND_VERSION
+
 # hadolint ignore=DL3013
 RUN pip install .[dev]
 EXPOSE 80
