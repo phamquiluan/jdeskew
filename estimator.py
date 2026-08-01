@@ -9,6 +9,7 @@ from jdeskew.estimator import get_angle
 
 
 class Estimator(BasePredictor):
+
     """Cog estimator."""
 
     def predict(self, input_path: Path = Input()) -> Dict:
