@@ -12,7 +12,7 @@ def _ensure_gray(image: np.ndarray) -> np.ndarray:
     return image
 
 
-def _ensure_optimal_square(image: np.ndarray) -> np.ndarray:
+def _ensure_optimal_square(image: np.ndarray, value: int = 255) -> np.ndarray:
     if image is None:
         raise ValueError("image must not be None")
     nw = nh = cv2.getOptimalDFTSize(max(image.shape[:2]))
@@ -23,19 +23,21 @@ def _ensure_optimal_square(image: np.ndarray) -> np.ndarray:
         left=0,
         right=nw - image.shape[1],
         borderType=cv2.BORDER_CONSTANT,
-        value=255,
+        value=value,
     )
     return output_image
 
 
 def _get_fft_magnitude(image: np.ndarray) -> np.ndarray:
     gray = _ensure_gray(image)
-    opt_gray = _ensure_optimal_square(gray)
 
-    # thresh
-    opt_gray = cv2.adaptiveThreshold(
-        ~opt_gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, -10
+    # thresh before padding: thresholding after padding with white draws a solid
+    # line where a darker-than-white image (e.g. a photo) meets the padding, and that
+    # line's spectrum pulls the estimate to 0 degrees
+    binary = cv2.adaptiveThreshold(
+        ~gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 15, -10
     )
+    opt_gray = _ensure_optimal_square(binary, value=0)
 
     # perform fft - using fft2 to ensure square output
     dft = np.fft.fft2(opt_gray)
